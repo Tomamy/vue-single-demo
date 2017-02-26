@@ -1,0 +1,38 @@
+{
+	"code": 0,
+	"data": [
+		{
+			"id": 1,
+			"portrait": "/data/list/user1.jpg",
+			"total_money": 100,
+			"pay_num": 20,
+			"title": "骑车销售广告代理俱乐部，点击查看",
+			"c_img_src": "/data/list/c1.jpg",
+			"visit": 24300,
+			"share": 2000,
+			"join": 3000
+		},
+		{
+			"id": 2,
+			"portrait": "/data/list/user1.jpg",
+			"total_money": 100,
+			"pay_num": 20,
+			"title": "骑车销售广告代理俱乐部，点击查看",
+			"c_img_src": "/data/list/c1.jpg",
+			"visit": 24300,
+			"share": 2000,
+			"join": 3000
+		},
+		{
+			"id": 3,
+			"portrait": "/data/list/user1.jpg",
+			"total_money": 100,
+			"pay_num": 20,
+			"title": "骑车销售广告代理俱乐部，点击查看",
+			"c_img_src": "/data/list/c1.jpg",
+			"visit": 24300,
+			"share": 2000,
+			"join": 3000
+		}
+	]			
+}

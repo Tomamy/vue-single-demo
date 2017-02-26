@@ -1,0 +1,49 @@
+<div class="c-fnav-view">
+	<ul class="navis-wrap clearfix">
+		<li v-bind:class="{ active: isHome  }">
+			<a href="/">
+				<div>
+					<!--<i class="icon-home3"></i>-->
+					<div class="i-home"></div>
+				</div>	
+				<div>首页</div>
+			</a>
+		</li>
+		<li v-bind:class="{ active: isList }">
+			<a href="/torder.html?pos=list">
+				<div>
+					<!--<i class="icon-file-text"></i>-->	
+					<div class="i-list"></div>
+				</div>	
+				<div>接单</div>
+			</a>
+		</li>		
+		<li v-bind:class="{ active: isPencil }">
+			<a href="/porder.html?pos=pencil">
+				<div>
+					<!--<i class="icon-plus"></i>-->	
+					<div class="i-pencil"></div>
+				</div>	
+				<div>发单</div>
+			</a>
+		</li>
+		<li v-bind:class="{ active: isWeidian }">
+			<a href="/vstore.html?pos=weidian">
+				<div>
+					<!--<i class="icon-library"></i>-->
+					<div class="i-weidian"></div>
+				</div>	
+				<div>微店</div>
+			</a>
+		</li>
+		<li v-bind:class="{ active: isUser }">
+			<a href="/home.html?pos=user">
+				<div>
+					<!--<i class="icon-user"></i>-->	
+					<div class="i-user"></div>
+				</div>	
+				<div>我的</div>
+			</a>
+		</li>
+	</ul>			
+</div>

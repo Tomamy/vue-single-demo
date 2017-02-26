@@ -1,0 +1,10 @@
+<div class="c-banner-view">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" v-for="ad in ads">
+				<img v-bind:src="ad.img_src" v-bind:data-id="ad.id">	
+			</div>	
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+</div>

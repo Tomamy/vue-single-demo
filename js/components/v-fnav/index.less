@@ -1,0 +1,107 @@
+.c-fnav-view {
+	width: 100%;
+	height: 41px;
+	background-color: #fff;
+	border-top: 1px solid #dddddd;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10000;
+
+	.navis-wrap {
+		
+		>li {
+			width: 20%;	
+			text-align: center;
+			float: left;
+			> a {
+				padding-top: 4px;
+				display: block;	
+				> div:first-child {
+					height: 16px;
+					position: relative;	
+					> div {
+						display: inline-block;	
+					}
+					.i-home {
+						width: 14px;
+						height: 13px;
+						background: url('/img/icon/home.png') no-repeat;
+						background-size: cover;
+					}
+					.i-list {
+						width: 12px;
+						height: 14px;
+						background: url('/img/icon/list.png') no-repeat;
+						background-size: cover;
+					}
+					.i-pencil {
+						width: 13px;
+						height: 13px;
+						background: url('/img/icon/pencil.png') no-repeat;
+						background-size: cover;
+					}
+					.i-weidian {
+						width: 13px;
+						height: 13px;
+						background: url('/img/icon/weidian.png') no-repeat;
+						background-size: cover;
+					}
+					.i-user {
+						width: 12px;
+						height: 12px;
+						background: url('/img/icon/user.png') no-repeat;
+						background-size: cover;
+					}
+				}
+				> div:last-child {
+					height: 20px;
+					font-size: 12px;	
+					line-height: 16px;
+					color: #4a4a4a;
+				}
+			}
+		}
+
+		> li.active {
+			> a {
+				> div:last-child {
+					color: #04be02;	
+				}
+				> div:first-child {
+					.i-home {
+						background: url('/img/icon/home-active.png') no-repeat;
+						background-size: cover;
+					}
+					.i-list {
+						background: url('/img/icon/list-active.png') no-repeat;
+						background-size: cover;
+					}
+					.i-pencil {
+						background: url('/img/icon/pencil-active.png') no-repeat;
+						background-size: cover;
+					}
+					.i-weidian {
+						background: url('/img/icon/weidian-active.png') no-repeat;
+						background-size: cover;
+					}
+					.i-user {
+						background: url('/img/icon/user-active.png') no-repeat;
+						background-size: cover;
+					}
+				}	
+			} 	
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<div class="c-adlist-view">
+	<ul class="list-wrap">	
+		<li v-for="v in lists">
+			<div class="list-head-wrap">
+				<div class="portrait-wrap">
+					<img v-bind:src="v.portrait">			
+				</div>	
+				<div class="text-wrap">
+					<div>{{v.title}}</div>
+					<div><span>总金额{{v.total_money}}元</span>&nbsp;|&nbsp;<span>已发放{{v.pay_num}}元</span></div>
+				</div>
+				<div class="btn-wrap">
+					<div class="btn-share">转发</div>	
+				</div>
+			</div>
+			<div class="list-img-wrap">
+				<img v-bind:src="v.c_img_src">	
+			</div>
+			<div class="list-footer-wrap clearfix">
+				<div>
+					<div>
+						<div class="i-share"></div>
+						<span>{{v.share}}</span>
+					</div>
+				</div>	
+				<div>
+					<div>
+						<div class="i-visit"></div>
+						<span>{{v.visit}}</span>
+					</div>
+				</div>	
+				<div>
+					<div>
+						<div class="i-join"></div>
+						<span>{{v.join}}</span>
+					</div>
+				</div>	
+			</div>
+		</li>
+	</ul>
+</div>

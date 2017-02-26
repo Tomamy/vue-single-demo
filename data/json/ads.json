@@ -1,0 +1,17 @@
+{
+	"code": 0,
+	"data": [
+		{
+			"id": 1,
+			"img_src": "/data/ads/1.jpg" 
+		},
+		{
+			"id": 2,
+			"img_src": "/data/ads/2.jpg"
+		},
+		{
+			"id": 3,
+			"img_src": "/data/ads/3.jpg"
+		}
+	]
+}

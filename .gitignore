@@ -1,0 +1,7 @@
+node_modules
+.pack
+dist
+.rev
+*.swp
+.git
+
