@@ -23,11 +23,13 @@ var sftp = require('gulp-sftp');
 
 var condition = true; //true 生产，false开发
 
+var baseServerDir = '/Themes/web/Hb/zh-cn/';
+
 //生产环境
 var pro_css = './dist/css',
 	pro_js = './dist/js',
-	pro_img = './dist/img',
-	pro_lib = './dist/lib',
+	pro_img = './dist/images',
+	pro_lib = './dist/js/lib',
 	pro_css_filename = 'app.css',
 	pro_html = './dist',
 	pro_index = './dist';
@@ -37,7 +39,7 @@ var dev_css = './style/global/css/**/*.css',
 	dev_css_dir = './style/global/css',
 	dev_less = './style/global/less/**/*.less',
 	dev_less_all = './style/**/*.less',
-	dev_img = './img/**/*',
+	dev_img = './images/**/*',
 	dev_js = './.pack/**/*.js',
 	dev_js_dirs = './js/**/*',
 	dev_lib = './lib/**/*',
@@ -45,8 +47,8 @@ var dev_css = './style/global/css/**/*.css',
 	dev_index = './*.html';
 
 //manifest path
-var img_manifest = './.rev/img',
-	img_rev_manifest = './.rev/img/**/*.json',
+var img_manifest = './.rev/images',
+	img_rev_manifest = './.rev/images/**/*.json',
 	js_manifest = './.rev/js',
 	css_manifest = './.rev/css',
 	css_rev_manifest = './.rev/css/**/*.json',
@@ -108,6 +110,8 @@ gulp.task("js",function(){
 		srcs.push(rev_manifest);	
 	}
 	return gulp.src(srcs)
+		.pipe(gulpif(condition,replace('/data',baseServerDir+'js/data')))
+		.pipe(gulpif(condition,replace('/images',baseServerDir+'images')))
 		.pipe(gulpif(condition,revCollector()))
 		.pipe(gulpif(
 			condition,uglify().on('error',gutil.log)	
@@ -154,8 +158,9 @@ gulp.task('html',function(){
 	if(condition){
 		gulp.src([dev_html,rev_manifest])
 			.pipe(revCollector())
-			.pipe(replace('./.pack','./js'))
-			.pipe(replace('./style/global/css','./css'))
+			.pipe(replace('/.pack','js'))
+			.pipe(replace('/style/global/css','css'))
+			.pipe(replace('/lib','js/lib'))
 			.pipe(htmlmin(htmlminOptions))
 			.pipe(gulp.dest(pro_html));	
 	}		
@@ -163,7 +168,8 @@ gulp.task('html',function(){
 
 gulp.task('data2dist',function(){
 	gulp.src('./data/**/*')
-		.pipe(gulp.dest('./dist/data'));
+		.pipe(replace('/images',baseServerDir+'images'))
+		.pipe(gulp.dest('./dist/js/data'));
 });
 
 //watch

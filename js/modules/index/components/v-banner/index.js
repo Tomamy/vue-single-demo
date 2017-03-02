@@ -5,6 +5,8 @@ import indexTpl from './index.html';
 
 import types from '../../vuex/types.js';
 
+import adsData from '../../../../../data/json/ads.json';
+
 export default {
 	template: indexTpl,
 	data() {
@@ -17,10 +19,13 @@ export default {
 	},
 	methods: {
 		init() {
-			this.$store.dispatch(types.GET_BANNER_DATA)
+			/**
+				this.$store.dispatch(types.GET_BANNER_DATA)
 				.then((ret) => {
 					this.ads = ret.data;
 				});	
+			**/
+			this.ads = adsData.data;
 		}					
 	},
 	updated () {

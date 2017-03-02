@@ -3,6 +3,8 @@ import indexTpl from './index.html';
 
 import $ from 'Jquery';
 
+import listData from '../../../data/json/list.json';
+
 export default {
 	template: indexTpl,			
 	data() {
@@ -18,6 +20,7 @@ export default {
 	},
 	methods: {
 		init() {
+			/**
 			let _this = this;
 			$.ajax({
 				type: 'get',
@@ -26,7 +29,9 @@ export default {
 				success: function(ret){
 					_this.lists = ret.data;	
 				}
-			});	
+			});
+			**/
+			this.lists = listData.data;
 		}	
 	},
 	mounted() {
