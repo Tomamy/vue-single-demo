@@ -1,7 +1,7 @@
 <div class="c-fnav-view">
 	<ul class="navis-wrap clearfix">
 		<li v-bind:class="{ active: isHome  }">
-			<a href="/">
+			<a href="/Hb/HbListGet.aspx?categoryId=0">
 				<div>
 					<!--<i class="icon-home3"></i>-->
 					<div class="i-home"></div>
@@ -10,7 +10,7 @@
 			</a>
 		</li>
 		<li v-bind:class="{ active: isList }">
-			<a href="/torder.html?pos=list">
+			<a href="/Hb/HbListGet.aspx?categoryId=0&pos=list">
 				<div>
 					<!--<i class="icon-file-text"></i>-->	
 					<div class="i-list"></div>
@@ -19,7 +19,8 @@
 			</a>
 		</li>		
 		<li v-bind:class="{ active: isPencil }">
-			<a href="/porder.html?pos=pencil">
+			<!--<a href="/Hb/HbCreate.aspx?pos=pencil">-->
+			<a href="/Hb/HbListGet.aspx?categoryId=0&pos=pencil">
 				<div>
 					<!--<i class="icon-plus"></i>-->	
 					<div class="i-pencil"></div>
@@ -28,7 +29,8 @@
 			</a>
 		</li>
 		<li v-bind:class="{ active: isWeidian }">
-			<a href="/vstore.html?pos=weidian">
+			<!--<a href="/Hb/TmList.aspx?pos=weidian">-->
+			<a href="/Hb/HbListGet.aspx?categoryId=0&pos=weidian">
 				<div>
 					<!--<i class="icon-library"></i>-->
 					<div class="i-weidian"></div>
@@ -37,7 +39,8 @@
 			</a>
 		</li>
 		<li v-bind:class="{ active: isUser }">
-			<a href="/home.html?pos=user">
+			<!--<a href="/Hb/yhzx.aspx?pos=user">-->
+			<a href="/Hb/HbListGet.aspx?categoryId=0&pos=user">
 				<div>
 					<!--<i class="icon-user"></i>-->	
 					<div class="i-user"></div>
